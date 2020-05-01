@@ -58,9 +58,27 @@ class EmployeeDirectory extends Component {
               name: "Terry Tart",
               position: "Coder",
               phone: "999-999-9999"
-            }
-          ]
-    }
+            },
+          ],
+    };
+
+// Writing down axios call in case we want a 3rd Party API and for practice
+    // componentDidMount() {
+    //     this.getEmployees();
+    // }
+
+    // getEmployees = () => {
+    //     axios
+    //     .get("apiURL")
+    //     .then((response) => {
+    //         this.setState({
+    //             employees: response.data.data,
+    //         });
+    //     }).catch((err) => {
+    //         console.log(err);
+    //     });
+    // }
+
     render() {
         return (
             <div>
