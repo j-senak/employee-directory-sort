@@ -82,7 +82,7 @@ class EmployeeDirectory extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome to the employee directory</h1>
+                <h1>Employee Directory</h1>
                 <List employees={this.state.employees}/>
             </div>
         );
