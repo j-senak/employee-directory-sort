@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Item = () => {
+const Item = (props) => {
     return (
-        <div>
-            
-        </div>
+        <li>
+            {props.name}
+        </li>
     );
 };
 
