@@ -59,7 +59,7 @@ class EmployeeDirectory extends Component {
         phone: "999-999-9999",
       },
     ],
-    searchTerm: ""
+    searchTerm: "",
   };
 
   // Writing down axios call in case we want a 3rd Party API and for practice
@@ -78,6 +78,13 @@ class EmployeeDirectory extends Component {
   //         console.log(err);
   //     });
   // }
+
+  clearFilter = () => {
+      this.setState({
+          employees: this.state.employees,
+          searchTerm: "",
+      });
+  };
 
   handleChange = (event) => {
       const {name, value} = event.target;
@@ -122,7 +129,10 @@ class EmployeeDirectory extends Component {
                   Submit
                 </button>
               </form>
-            </div>
+              {(this.state.searchTerm.length > 0) && (
+              <button className="btn btn-secondary" onClick={this.clearFilter}>Clear Filter</button>
+              )}
+              </div>
           </div>
         </div>
         <List employees={this.state.employees} />
