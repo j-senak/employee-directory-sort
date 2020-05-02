@@ -79,31 +79,51 @@ class EmployeeDirectory extends Component {
   //     });
   // }
 
+//   constructor(props) {
+//     super(props)
+//     this.state = { EmployeeDirectory }
+//     this.sortByNameAsc = this.sortByNameAsc.bind(this);
+//     this.sortByNameDesc = this.sortByNameDesc.bind(this);
+//   }
+
+
+  sortByNameAsc() {
+    this.setState((prevState) => {
+      this.state.employees.sort((a, b) => a.name - b.name);
+    });
+  }
+
+  sortByNameDesc() {
+    this.setState((prevState) => {
+      this.state.employees.sort((a, b) => b.name - a.name);
+    });
+  }
+
   clearFilter = () => {
-      this.setState({
-          employees: this.state.employees,
-          searchTerm: "",
-      });
+    this.setState({
+      employees: this.state.employees,
+      searchTerm: "",
+    });
   };
 
   handleChange = (event) => {
-      const {name, value} = event.target;
-      this.setState({
-          [name]: value,
-      });
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state.searchTerm);
     const employees = [...this.state.employees];
-    const filteredEmployees = employees.filter(employee => {
-        // return employee.name.includes(this.state.searchTerm);
-        const regex = new RegExp(this.state.searchTerm, 'gi');
-        return employee.name.match(regex);
+    const filteredEmployees = employees.filter((employee) => {
+      // return employee.name.includes(this.state.searchTerm);
+      const regex = new RegExp(this.state.searchTerm, "gi");
+      return employee.name.match(regex);
     });
     this.setState({
-        employees: filteredEmployees,
+      employees: filteredEmployees,
     });
   };
 
@@ -129,10 +149,17 @@ class EmployeeDirectory extends Component {
                   Submit
                 </button>
               </form>
-              {(this.state.searchTerm.length > 0) && (
-              <button className="btn btn-secondary" onClick={this.clearFilter}>Clear Filter</button>
+              {this.state.searchTerm.length > 0 && (
+                <button
+                  className="btn btn-secondary"
+                  onClick={this.clearFilter}
+                >
+                  Clear Filter
+                </button>
               )}
-              </div>
+              <button onClick={this.sortByNameAsc}>Sort Up</button>
+              <button onClick={this.sortByNameDesc}>Sort Down</button>
+            </div>
           </div>
         </div>
         <List employees={this.state.employees} />
