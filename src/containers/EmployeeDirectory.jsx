@@ -80,7 +80,7 @@ class EmployeeDirectory extends Component {
   // }
 
 //   constructor(props) {
-//     super(props)
+//     super(props.name)
 //     this.state = { EmployeeDirectory }
 //     this.sortByNameAsc = this.sortByNameAsc.bind(this);
 //     this.sortByNameDesc = this.sortByNameDesc.bind(this);
@@ -157,8 +157,8 @@ class EmployeeDirectory extends Component {
                   Clear Filter
                 </button>
               )}
-              <button onClick={this.sortByNameAsc}>Sort Up</button>
-              <button onClick={this.sortByNameDesc}>Sort Down</button>
+              <button onClick={this.sortByNameAsc}>Sort by Name Up</button>
+              <button onClick={this.sortByNameDesc}>Sort by Name Down</button>
             </div>
           </div>
         </div>
