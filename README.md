@@ -1,68 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# employee-directory
+For this project, we have created an employee table with React to store, filter, and sort employees in a company. The user is presented with a able of all their employees. When the user types in the search bar, they are presented with all employee names that match the input criteria. When they click the the sort buttons, the employees will rearrange according to their name.
 
-## Available Scripts
+## Why
+For employers, it can come in handy to keep track of employee information and be able to access it quickly. Find the information you need without flipping through contact books or business cards.
 
-In the project directory, you can run:
 
-### `yarn start`
+## The Process
+First thing I did was create the React app with create-react-app then connecting it to a Github Repo. Then I set up all the folders and files necessary and deleted the unneeded ones. After that, I set up my array of employees. With those in place, I could write out the properties that each employee will have visiable in Item.jsx. Linking that to List.jsx, I added the column headers and then looped over the array to display all employees. With the whole array displayed, I added the search bar and gave it functionality. Then I worked on adding the sorting buttons. Future development will focus on dynamic employee input, fluid reloading of the array filtering, getting the sort buttons to actually work and giving more sorting options, and more CSS styling.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Screenshots
+![Screen Shot 2020-05-01 at 11 15 11 PM](https://user-images.githubusercontent.com/59843943/80854277-ba34c600-8c04-11ea-9610-373d019cbdcf.png)
+![Screen Shot 2020-05-01 at 11 14 56 PM](https://user-images.githubusercontent.com/59843943/80854279-bbfe8980-8c04-11ea-90d7-b46c0985a5c0.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Github Repo
+https://github.com/j-senak/employee-directory-sort

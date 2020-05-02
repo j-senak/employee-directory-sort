@@ -1,0 +1,30 @@
+.col-3 {
+    border-radius: 4px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    background-color: rgba(255, 55, 5, 0.904);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.col {
+    border-radius: 4px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    padding: 10px;
+    background-color: lightblue;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.col-bg{
+    background-color:rgb(199, 194, 188);
+}
