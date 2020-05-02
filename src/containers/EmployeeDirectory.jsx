@@ -59,6 +59,7 @@ class EmployeeDirectory extends Component {
         phone: "999-999-9999",
       },
     ],
+    searchTerm: ""
   };
 
   // Writing down axios call in case we want a 3rd Party API and for practice
@@ -78,8 +79,25 @@ class EmployeeDirectory extends Component {
   //     });
   // }
 
+  handleChange = (event) => {
+      const {name, value} = event.target;
+      this.setState({
+          [name]: value,
+      });
+  };
+
   handleSubmit = (event) => {
-    event.preventDefault()
+    event.preventDefault();
+    console.log(this.state.searchTerm);
+    const employees = [...this.state.employees];
+    const filteredEmployees = employees.filter(employee => {
+        // return employee.name.includes(this.state.searchTerm);
+        const regex = new RegExp(this.state.searchTerm, 'gi');
+        return employee.name.match(regex);
+    });
+    this.setState({
+        employees: filteredEmployees,
+    });
   };
 
   render() {
@@ -88,13 +106,16 @@ class EmployeeDirectory extends Component {
         <h1>Employee Directory</h1>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col col-bg">
               <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                   <input
                     type="text"
                     className="form-control"
                     placeholder="Search Employees"
+                    name="searchTerm"
+                    value={this.state.searchTerm}
+                    onChange={this.handleChange}
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">
