@@ -1,54 +1,16 @@
 # employee-directory
+For this project, we have created an employee table with React to store, filter, and sort employees in a company. The user is presented with a able of all their employees. When the user types in the search bar, they are presented with all employee names that match the input criteria. When they click the the sort buttons, the employees will rearrange according to their name.
 
-# Unit 19 React Homework: Employee Directory
-
-## Overview
-
-For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.
-
-## User Story
-
-* As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
-
-## Business Context
-
-An employee or manager would benefit greatly from being able to view non-sensitive data about other employees. It would be particularly helpful to be able to filter employees by name.
-
-## Acceptance Criteria
-
-Given a table of random users, when the user loads the page, a table of employees should render. 
-
-The user should be able to:
-
-  * Sort the table by at least one category
-
-  * Filter the users by at least one property.
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills
-
-2. Your commit history allows you to revert your code base in the event that you need to return to a previous state
-
-Follow these guidelines for committing:
-
-* Make single purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history
-
-* Don't commit half done work, for the sake of your collaborators (and your future self!)
-
-* Test your application before you commit to ensure functionality at every step in the development process
-
-We would like you to have well over 200 commits by graduation, so commit early and often!
+## Why
+For employers, it can come in handy to keep track of employee information and be able to access it quickly. Find the information you need without flipping through contact books or business cards.
 
 
-## Submission on BCS
+## The Process
+First thing I did was create the React app with create-react-app then connecting it to a Github Repo. Then I set up all the folders and files necessary and deleted the unneeded ones. After that, I set up my array of employees. With those in place, I could write out the properties that each employee will have visiable in Item.jsx. Linking that to List.jsx, I added the column headers and then looped over the array to display all employees. With the whole array displayed, I added the search bar and gave it functionality. Then I worked on adding the sorting buttons. Future development will focus on dynamic employee input, fluid reloading of the array filtering, getting the sort buttons to actually work and giving more sorting options, and more CSS styling.
 
-You are required to submit the following:
+## Screenshots
+![Screen Shot 2020-05-01 at 11 15 11 PM](https://user-images.githubusercontent.com/59843943/80854277-ba34c600-8c04-11ea-9610-373d019cbdcf.png)
+![Screen Shot 2020-05-01 at 11 14 56 PM](https://user-images.githubusercontent.com/59843943/80854279-bbfe8980-8c04-11ea-90d7-b46c0985a5c0.png)
 
-* the URL to the deployed application
-
-* the URL to the Github repository
+## Github Repo
+https://github.com/j-senak/employee-directory-sort
